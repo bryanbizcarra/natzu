@@ -1,0 +1,91 @@
+.hero {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url('../assets/portada-home.webp');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    /* Eliminamos flex aquí para que el container se comporte normal */
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(13, 13, 13, 1) 0%, rgba(13, 13, 13, 0.7) 50%, rgba(13, 13, 13, 0.3) 100%) !important;
+}
+
+.hero .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+    padding-top: 100px;
+    /* Despega el contenido del menú */
+}
+
+.hero-content-wrapper {
+    max-width: 750px;
+    text-align: left;
+}
+
+.hero-subtitle {
+    color: var(--primary-color) !important;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 7vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #ffffff !important;
+    /* Forever white */
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #e0e0e0 !important;
+    /* Forever light gray */
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-secondary {
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .hero-btns {
+        flex-direction: column;
+    }
+}
